@@ -1,22 +1,45 @@
-function run() {
-	var command = document.querySelector("#command").value;
-	switch (command) {
-		case "help":
-			view = "./help.html";
-			break;
-		case "test":
-			view = "./test.html";
-			break;
-		default:
-			view = "./unknown.html";
-			break;
-	}
+function run(event) {
+	if (event.key === "Enter") {
+		event.preventDefault();
 
-	fetch(view)
-		.then(response => response.text())
-		.then(text => document.getElementById("content").innerHTML = text);
-	command.value = "";
+		var command = document.querySelector("#textbox").value;
+
+		switch (command) {
+			case "help":
+				view = "./help.html";
+				break;
+
+			case "run":
+				view = "./run.html";
+				break;
+
+			case "run past.exe":
+				view = "./past.html";
+				break;
+
+			case "run present.exe":
+				view = "./present.html";
+				break;
+
+			case "run future.exe":
+				view = "./future.html";
+				break;
+
+			case "list":
+				view = "./list.html";
+				break;
+
+			default:
+				view = "./unknown.html";
+				break;
+		}
+
+		fetch(view)
+			.then(response => response.text())
+			.then(text => document.getElementById("content").innerHTML += text);
+		command.value = "";
+	}
 }
 
-var button = document.querySelector("#button");
-button.addEventListener("click", run);
+var textbox = document.querySelector("#textbox");
+textbox.addEventListener("keypress", run);
