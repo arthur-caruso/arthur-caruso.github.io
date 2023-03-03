@@ -37,7 +37,8 @@ function run(event) {
 		fetch(view)
 			.then(response => response.text())
 			.then(text => document.getElementById("content").innerHTML += text);
-		command.value = "";
+
+		document.getElementById("prompt").reset();
 	}
 }
 
