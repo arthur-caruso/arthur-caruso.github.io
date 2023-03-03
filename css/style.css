@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&display=swap');
+
+:root {
+	--color-title: #fff;
+	--color-text: white;
+}
+
+.past-theme {
+	--color-subtitle: #1e96fc;
+}
+
+.present-theme {
+	--color-subtitle: #ff9505;
+}
+
+.future-theme {
+	--color-subtitle: #8ac926;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+	text-decoration: none;
+	font-family: 'Poppins', sans-serif;
+}
+
+.container {
+	height: 100vh;
+	width: 100vw;
+	background-color: #161a1d;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.container form {
+	width: 30%;
+	margin-top: 80px;
+	display: flex;
+	flex-direction: column;
+
+}
+
+.container form .title {
+	font-size: 42px;
+	font-weight: 700;
+	color: white;
+}
+
+.container form input {
+	margin-top: 10px;
+	height: 35px;
+	border-radius: 10px;
+	padding: 10px;
+}
+
+.container #content {
+	width: 60%;
+	margin-top: 60px;
+}
+
+.container #content>div {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.container #content h2 {
+	font-size: 40px;
+	color: var(--color-subtitle);
+}
+
+.container #content div p {
+	margin-top: 20px;
+	text-align: justify;
+	font-size: 17px;
+	color: rgb(158, 158, 158);
+}
+
+.container #content div strong {
+	color: #fff;
+}
+
+.container img {
+	margin-top: 70px;
+}
+
+code {
+	color: #fff;
+}

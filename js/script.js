@@ -1,3 +1,5 @@
+const contentDiv = document.getElementById("content");
+
 function run(event) {
 	if (event.key === "Enter") {
 		event.preventDefault();
@@ -9,20 +11,30 @@ function run(event) {
 				view = "./help.html";
 				break;
 
-			case "run":
-				view = "./run.html";
+			case "autodestruct":
+				view = "./forbidden.html";
 				break;
 
-			case "run past.exe":
+			case "read":
+				view = "./read.html";
+				break;
+
+			case "read diary_entry1.txt":
 				view = "./past.html";
+				contentDiv.removeAttribute('class');
+				contentDiv.classList.toggle('past-theme');
 				break;
 
-			case "run present.exe":
+			case "read diary_entry35.txt":
 				view = "./present.html";
+				contentDiv.removeAttribute('class');
+				contentDiv.classList.toggle('present-theme');
 				break;
 
-			case "run future.exe":
+			case "read diary_entry126.txt":
 				view = "./future.html";
+				contentDiv.removeAttribute('class');
+				contentDiv.classList.toggle('future-theme');
 				break;
 
 			case "list":
