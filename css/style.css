@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&display=swap');
 
 :root {
+	background-color: #161a1d;
 	--color-title: #fff;
 	--color-text: white;
 }
@@ -75,7 +76,7 @@
 
 .container #content div p {
 	margin-top: 20px;
-	text-align: justify;
+	text-align: left;
 	font-size: 17px;
 	color: rgb(158, 158, 158);
 }
